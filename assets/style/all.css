@@ -16170,7 +16170,8 @@ input[readonly] {
   @media (max-width: 576px) {
     .footer {
       font-size: 0.8rem;
-      padding-top: 48px; } }
+      padding-top: 48px;
+      letter-spacing: 0; } }
   .footer-logo {
     width: 195px; }
   .footer-function {
@@ -16188,6 +16189,9 @@ input[readonly] {
     @media (max-width: 1550px) {
       .footer-function {
         bottom: 160px; } }
+    @media (max-width: 576px) {
+      .footer-function {
+        bottom: 200px; } }
     .footer-function-link {
       width: 55px;
       height: 55px;
