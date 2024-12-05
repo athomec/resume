@@ -15917,7 +15917,7 @@ input[readonly] {
   @media (max-width: 768px) {
     .main {
       padding-top: 44px; } }
-  @media (max-width: 576px) {
+  @media (max-width: 523px) {
     .main {
       padding-top: 63px; } }
 
@@ -15929,6 +15929,15 @@ input[readonly] {
       font-size: 0.8rem; } }
   .section[data-con="index"] {
     margin-top: -76px; }
+    @media (max-width: 1430px) {
+      .section[data-con="index"] {
+        margin-top: -48px; } }
+    @media (max-width: 768px) {
+      .section[data-con="index"] {
+        margin-top: -32px; } }
+    @media (max-width: 576px) {
+      .section[data-con="index"] {
+        margin-top: -24px; } }
 
 .basic-btn {
   display: -webkit-box;
