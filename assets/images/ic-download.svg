@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <g id="ic-download" transform="translate(-1299 -1521)">
+    <g id="download_for_offline_24dp_5F6368" transform="translate(1299 1521)">
+      <g id="Group_15" data-name="Group 15">
+        <rect id="Rectangle_39" data-name="Rectangle 39" width="30" height="30" fill="none"/>
+      </g>
+      <g id="Group_17" data-name="Group 17" transform="translate(2.5 2.5)">
+        <g id="Group_16" data-name="Group 16">
+          <path id="Path_116" data-name="Path 116" d="M14.5,2A12.5,12.5,0,1,0,27,14.5,12.521,12.521,0,0,0,14.5,2Zm0,22.5a10,10,0,1,1,10-10A10.013,10.013,0,0,1,14.5,24.5Zm3.237-14.262L19.5,12l-5,5-5-5,1.762-1.762,1.988,1.975V7h2.5v5.212ZM20.75,20.75H8.25v-2.5h12.5Z" transform="translate(-2 -2)" fill="#fff"/>
+        </g>
+      </g>
+    </g>
+    <rect id="Rectangle_834" data-name="Rectangle 834" width="30" height="30" transform="translate(1299 1521)" fill="none"/>
+  </g>
+</svg>

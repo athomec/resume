@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <g id="ic-member" transform="translate(-765 -1521)">
+    <g id="person-plus-fill" transform="translate(766 1524)">
+      <path id="Path_121" data-name="Path 121" d="M1.75,23A1.714,1.714,0,0,1,0,21.25c0-1.75,1.75-7,10.5-7S21,19.5,21,21.25A1.714,1.714,0,0,1,19.25,23ZM10.5,12.5A5.25,5.25,0,1,0,5.25,7.25,5.25,5.25,0,0,0,10.5,12.5" fill="#fff"/>
+      <path id="Path_122" data-name="Path 122" d="M15.375,5a.875.875,0,0,1,.875.875V8.5h2.625a.875.875,0,0,1,0,1.75H16.25v2.625a.875.875,0,0,1-1.75,0V10.25H11.875a.875.875,0,0,1,0-1.75H14.5V5.875A.875.875,0,0,1,15.375,5" transform="translate(8.25 2.25)" fill="#fff" fill-rule="evenodd"/>
+    </g>
+    <rect id="Rectangle_832" data-name="Rectangle 832" width="30" height="30" transform="translate(765 1521)" fill="none"/>
+  </g>
+</svg>
