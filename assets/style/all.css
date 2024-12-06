@@ -18307,8 +18307,8 @@ input[readonly] {
   border-bottom: 3px solid #41A18A;
   padding-bottom: 12px; }
   .main-title[data-con="page"] img {
-    width: 48px;
-    margin-right: 8px;
+    width: 40px;
+    margin-right: 12px;
     -webkit-filter: invert(66%) sepia(38%) saturate(466%) hue-rotate(115deg) brightness(200%) contrast(82%);
             filter: invert(66%) sepia(38%) saturate(466%) hue-rotate(115deg) brightness(200%) contrast(82%); }
     @media (max-width: 1430px) {
@@ -18317,6 +18317,14 @@ input[readonly] {
     @media (max-width: 991px) {
       .main-title[data-con="page"] img {
         width: 32px; } }
+  .main-title[data-con="page"][data-script="true"] {
+    letter-spacing: 0;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
+    .main-title[data-con="page"][data-script="true"] span {
+      font-size: 1.25rem;
+      padding-left: 16px; }
 
 .download-btn {
   background: #fff;
