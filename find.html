@@ -87,103 +87,176 @@
 					title="網頁主要內容資料區">:::</a>					
 				<!--內容區塊開始-->
 <main class="main">
-	<div class="banner">
-		<div class="banner-item">
-			<a href="#" class="banner-item-link" title="圖片說明">
-				<div class="banner-item-img">
-					<img src="./assets/images/banner.jpg" alt="圖片說明">
-				</div>
-			</a>
-		</div>
-	</div>
-	<section class="section" data-con="index">
-		<div class="container">
-			<div class="link-box mb-5">
-				<h2 class="main-title mb-3 mb-md-4">
-					我想要進行……
-				</h2>
-				<div class="row g-3">
-					<div class="col-sm-6 col-xl-3">
-						<a href="#" class="link-box-link" title="申請輔導派案">
-							<div class="link-box-icon bg-secondary-light">
-								<img src="./assets/images/ic-apply.svg" alt="icon">
-							</div>
-							<div class="link-box-text">
-								申請輔導派案
-							</div>
-						</a>
-					</div>
-					<div class="col-sm-6 col-xl-3">
-						<a href="#" class="link-box-link" title="成為輔導員">
-							<div class="link-box-icon bg-secondary-light">
-								<img src="./assets/images/ic-member.svg" alt="icon">
-							</div>
-							<div class="link-box-text">
-								成為輔導員
-							</div>
-						</a>
-					</div>
-					<div class="col-sm-6 col-xl-3">
-						<a href="#" class="link-box-link" title="尋找輔導員">
-							<div class="link-box-icon bg-secondary-light">
-								<img src="./assets/images/ic-find.svg" alt="icon">
-							</div>
-							<div class="link-box-text">
-								尋找輔導員
-							</div>
-						</a>
-					</div>
-					<div class="col-sm-6 col-xl-3">
-						<a href="#" class="link-box-link" title="文件下載">
-							<div class="link-box-icon bg-secondary-light">
-								<img src="./assets/images/ic-download.svg" alt="icon">
-							</div>
-							<div class="link-box-text">
-								文件下載
-							</div>
-						</a>
-					</div>
-				</div>
-			</div>
-			<div class="link-box">
-				<h2 class="main-title mb-3 mb-md-4">
-					我想知道……
-				</h2>
-				<div class="row g-3">
-					<div class="col-md-4">
-						<a href="#" class="link-box-link" title="最新消息">
-							<div class="link-box-icon bg-tertiary">
-								<img src="./assets/images/ic-news.svg" alt="icon">
-							</div>
-							<div class="link-box-text">
-								最新消息
-							</div>
-						</a>
-					</div>
-					<div class="col-md-4">
-						<a href="#" class="link-box-link" title="什麼是輔導派案？">
-							<div class="link-box-icon bg-tertiary">
-								<img src="./assets/images/ic-info.svg" alt="icon">
-							</div>
-							<div class="link-box-text">
-								什麼是輔導派案？
-							</div>
-						</a>
-					</div>
-					<div class="col-md-4">
-						<a href="#" class="link-box-link" title="什麼是輔導員？">
-							<div class="link-box-icon bg-tertiary">
-								<img src="./assets/images/ic-who.svg" alt="icon">
-							</div>
-							<div class="link-box-text">
-								什麼是輔導員？
-							</div>
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+    <div class="bg-white border-bottom border-gray-300 py-2">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="#">首頁</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">尋找輔導員</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="main-title mb-3 border-0" data-con="page">
+                <img src="./assets/images/ic-find.svg" alt="icon">尋找輔導員
+            </h2>
+            <div class="main-box">
+                <div class="main-box-header">
+                    <div class="row gx-3 gy-2">
+                        <div class="col-sm-4 col-lg-3">
+                            <label for="keyword" class="form-label">關鍵字查詢</label>
+                            <input type="text" class="form-control" id="keyword" placeholder="請輸入輔導員姓名">
+                        </div>
+                        <div class="col-sm-4 col-lg-2">
+                            <label for="zone" class="form-label">輔導區域</label>
+                            <select class="form-select" id="zone">
+                                <option selected>選擇區域</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-4 col-lg-2">
+                            <label for="group" class="form-label">集團經驗輔導</label>
+                            <select class="form-select" id="group">
+                                <option selected>全部</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="d-flex align-items-end justify-content-end w-100 h-100">
+                                <button class="main-box-btn btn btn-primary me-3">
+                                    <img src="./assets/images/ic-search-white.svg" alt="icon" class="me-2">搜尋
+                                </button>
+                                <button class="main-box-btn btn btn-gray-800">
+                                    <img src="./assets/images/ic-clear.svg" alt="icon" class="me-2">清空條件
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-box-body">
+                    <div class="row gy-4 mb-4">
+                        <div class="col-md-6 col-xxl-4">
+                            <div class="name-card">
+                                <h3 class="name-card-title">王小名<span>集團經驗輔導</span></h3>
+                                主要輔導區: 台北<br>
+                                可協助區域輔導:桃園、基隆<br>
+                                信箱：<a href="mailto:asdafas234121233@gmail.com"
+                                    class="link-gray-800">asdafas234121233@gmail.com</a><br>
+                                總輔導案數：20
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xxl-4">
+                            <div class="name-card">
+                                <h3 class="name-card-title">王小名<span>集團經驗輔導</span></h3>
+                                主要輔導區: 台北<br>
+                                可協助區域輔導:桃園、基隆<br>
+                                信箱：<a href="mailto:asdafas234121233@gmail.com"
+                                    class="link-gray-800">asdafas234121233@gmail.com</a><br>
+                                總輔導案數：20
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xxl-4">
+                            <div class="name-card">
+                                <h3 class="name-card-title">王小名</h3>
+                                主要輔導區: 台北<br>
+                                可協助區域輔導:桃園、基隆<br>
+                                信箱：<a href="mailto:asdafas234121233@gmail.com"
+                                    class="link-gray-800">asdafas234121233@gmail.com</a><br>
+                                總輔導案數：20
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xxl-4">
+                            <div class="name-card">
+                                <h3 class="name-card-title">王小名</h3>
+                                主要輔導區: 台北<br>
+                                可協助區域輔導:桃園、基隆<br>
+                                信箱：<a href="mailto:asdafas234121233@gmail.com"
+                                    class="link-gray-800">asdafas234121233@gmail.com</a><br>
+                                總輔導案數：20
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xxl-4">
+                            <div class="name-card">
+                                <h3 class="name-card-title">王小名<span>集團經驗輔導</span></h3>
+                                主要輔導區: 台北<br>
+                                可協助區域輔導:桃園、基隆<br>
+                                信箱：<a href="mailto:asdafas234121233@gmail.com"
+                                    class="link-gray-800">asdafas234121233@gmail.com</a><br>
+                                總輔導案數：20
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xxl-4">
+                            <div class="name-card">
+                                <h3 class="name-card-title">王小名</h3>
+                                主要輔導區: 台北<br>
+                                可協助區域輔導:桃園、基隆<br>
+                                信箱：<a href="mailto:asdafas234121233@gmail.com"
+                                    class="link-gray-800">asdafas234121233@gmail.com</a><br>
+                                總輔導案數：20
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xxl-4">
+                            <div class="name-card">
+                                <h3 class="name-card-title">王小名</h3>
+                                主要輔導區: 台北<br>
+                                可協助區域輔導:桃園、基隆<br>
+                                信箱：<a href="mailto:asdafas234121233@gmail.com"
+                                    class="link-gray-800">asdafas234121233@gmail.com</a><br>
+                                總輔導案數：20
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xxl-4">
+                            <div class="name-card">
+                                <h3 class="name-card-title">王小名</h3>
+                                主要輔導區: 台北<br>
+                                可協助區域輔導:桃園、基隆<br>
+                                信箱：<a href="mailto:asdafas234121233@gmail.com"
+                                    class="link-gray-800">asdafas234121233@gmail.com</a><br>
+                                總輔導案數：20
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xxl-4">
+                            <div class="name-card">
+                                <h3 class="name-card-title">王小名<span>集團經驗輔導</span></h3>
+                                主要輔導區: 台北<br>
+                                可協助區域輔導:桃園、基隆<br>
+                                信箱：<a href="mailto:asdafas234121233@gmail.com"
+                                    class="link-gray-800">asdafas234121233@gmail.com</a><br>
+                                總輔導案數：20
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-wrap flex-column align-items-center justify-content-center flex-md-row">
+                        <ul class="pagination">
+                            <li class="pagination-item" data-page="first"><a class="pagination-link" href="#"
+                                    title="最前頁">«</a></li>
+                            <li class="pagination-item" data-page="prev"><a class="pagination-link" href="#"
+                                    title="上一頁">‹</a></li>
+                            <li class="pagination-item" data-page="1"><a class="pagination-link active" href="#">1</a>
+                            </li>
+                            <li class="pagination-item" data-page="2"><a class="pagination-link" href="#">2</a></li>
+                            <li class="pagination-item" data-page="next"><a class="pagination-link" href="#"
+                                    title="下一頁">›</a></li>
+                            <li class="pagination-item" data-page="last"><a class="pagination-link" href="#"
+                                    title="最後頁">»</a></li>
+                        </ul>
+                        <div class="d-flex align-items-center ms-md-auto flex-shrink-0">
+                            共 120 筆，每頁顯示<input type="text"
+                                class="form-control form-control-sm mx-2 py-0 text-center rounded-2 border-gray-500"
+                                value="10" style="width:58px;min-height: 20px;">筆
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
 					<!--footer開始-->
 <footer class="footer">
