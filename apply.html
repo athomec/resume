@@ -87,103 +87,237 @@
 					title="網頁主要內容資料區">:::</a>					
 				<!--內容區塊開始-->
 <main class="main">
-	<div class="banner">
-		<div class="banner-item">
-			<a href="#" class="banner-item-link" title="圖片說明">
-				<div class="banner-item-img">
-					<img src="./assets/images/banner.jpg" alt="圖片說明">
-				</div>
-			</a>
-		</div>
-	</div>
-	<section class="section" data-con="index">
-		<div class="container">
-			<div class="link-box mb-5">
-				<h2 class="main-title mb-3 mb-md-4">
-					我想要進行……
-				</h2>
-				<div class="row g-3">
-					<div class="col-sm-6 col-xl-3">
-						<a href="apply.html" class="link-box-link" title="申請輔導派案">
-							<div class="link-box-icon bg-secondary-light">
-								<img src="./assets/images/ic-apply.svg" alt="icon">
-							</div>
-							<div class="link-box-text">
-								申請輔導派案
-							</div>
-						</a>
-					</div>
-					<div class="col-sm-6 col-xl-3">
-						<a href="#" class="link-box-link" title="成為輔導員">
-							<div class="link-box-icon bg-secondary-light">
-								<img src="./assets/images/ic-member.svg" alt="icon">
-							</div>
-							<div class="link-box-text">
-								成為輔導員
-							</div>
-						</a>
-					</div>
-					<div class="col-sm-6 col-xl-3">
-						<a href="#" class="link-box-link" title="尋找輔導員">
-							<div class="link-box-icon bg-secondary-light">
-								<img src="./assets/images/ic-find.svg" alt="icon">
-							</div>
-							<div class="link-box-text">
-								尋找輔導員
-							</div>
-						</a>
-					</div>
-					<div class="col-sm-6 col-xl-3">
-						<a href="#" class="link-box-link" title="文件下載">
-							<div class="link-box-icon bg-secondary-light">
-								<img src="./assets/images/ic-download.svg" alt="icon">
-							</div>
-							<div class="link-box-text">
-								文件下載
-							</div>
-						</a>
-					</div>
-				</div>
-			</div>
-			<div class="link-box">
-				<h2 class="main-title mb-3 mb-md-4">
-					我想知道……
-				</h2>
-				<div class="row g-3">
-					<div class="col-md-4">
-						<a href="#" class="link-box-link" title="最新消息">
-							<div class="link-box-icon bg-tertiary">
-								<img src="./assets/images/ic-news.svg" alt="icon">
-							</div>
-							<div class="link-box-text">
-								最新消息
-							</div>
-						</a>
-					</div>
-					<div class="col-md-4">
-						<a href="#" class="link-box-link" title="什麼是輔導派案？">
-							<div class="link-box-icon bg-tertiary">
-								<img src="./assets/images/ic-info.svg" alt="icon">
-							</div>
-							<div class="link-box-text">
-								什麼是輔導派案？
-							</div>
-						</a>
-					</div>
-					<div class="col-md-4">
-						<a href="#" class="link-box-link" title="什麼是輔導員？">
-							<div class="link-box-icon bg-tertiary">
-								<img src="./assets/images/ic-who.svg" alt="icon">
-							</div>
-							<div class="link-box-text">
-								什麼是輔導員？
-							</div>
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+    <div class="bg-white border-bottom border-gray-300 py-2">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="#">首頁</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">申請輔導派案</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <section class="section apply-box">
+        <div class="container">
+            <h2 class="main-title mb-3 mb-md-4" data-con="page" data-script="true">
+                <img src="./assets/images/ic-apply.svg" alt="icon">歡迎您一起加入產銷履歷的行列
+                <span>表格填寫完成後相關負責人員將與您聯繫，謝謝！</span>
+            </h2>
+            <div class="row gx-3 gx-md-4 gy-3 gy-md-4 mb-5">
+                <div class="col-6 col-md-3">
+                    <label for="name" class="form-label">經營者姓名</label>
+                    <input type="text" class="form-control" id="name" value="王曉明">
+                </div>
+                <div class="col-6 col-md-3">
+                    <label for="name" class="form-label">聯絡人電話</label>
+                    <input type="text" class="form-control" id="name" value="0912123456">
+                </div>
+                <div class="col-md-6">
+                    <label for="name" class="form-label">電子郵件</label>
+                    <input type="text" class="form-control" id="name" value="asdzxc123456@gmail.com">
+                </div>
+                <div class="col-md-3">
+                    <label for="name" class="form-label">線路編號</label>
+                    <input type="text" class="form-control" id="name" value="1234556889">
+                </div>
+                <div class="col-md-9">
+                    <div class="form-label text-start">輔導地點</div>
+                    <div class="row gx-3 gx-sm-2 gy-2">
+                        <div class="col-6 col-sm-3 col-xl-2">
+                            <label for="city" class="visually-hidden">城市</label>
+                            <select class="form-select me-3" id="city">
+                                <option selected="">臺中市</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                        <div class="col-6 col-sm-3 col-xl-2">
+                            <label for="district" class="visually-hidden">輔導區域</label>
+                            <select class="form-select" id="district">
+                                <option selected="">選擇區域</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-6 col-xl-8">
+                            <label for="add" class="visually-hidden">地址</label>
+                            <input type="text" class="form-control" id="add">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <label for="item" class="form-label">作品項目</label>
+                    <input type="text" class="form-control" id="item" value="王曉明">
+                </div>
+                <div class="col-6 col-md-3">
+                    <label for="area" class="form-label">驗證面積 (面積)</label>
+                    <input type="text" class="form-control" id="area" value="123456">
+                </div>
+                <div class="col-6 col-md-3">
+                    <label for="sun" class="form-label">預計出席人數</label>
+                    <input type="text" class="form-control" id="sum" value="5">
+                </div>
+            </div>
+            <table class="table table-rwd table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col" width="56">項次</th>
+                        <th scope="col">說明</th>
+                        <th scope="col" colspan="2">檢查結果</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-th="項次">1</td>
+                        <td data-th="說明" class="text-start">具備產銷履歷概念(含精神與內涵)</td>
+                        <td data-th="檢查結果">
+                            <input class="form-check-input" type="radio" name="result1" id="yes1" checked>
+                            <label class="form-check-label" for="yes1">
+                                是
+                            </label>
+                        </td>
+                        <td data-th="">
+                            <input class="form-check-input" type="radio" name="result1" id="no1">
+                            <label class="form-check-label" for="no1">
+                                否
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-th="項次">2</td>
+                        <td data-th="說明" class="text-start">了解台灣良好農業規範(TGAP)</td>
+                        <td data-th="檢查結果">
+                            <input class="form-check-input" type="radio" name="result2" id="yes2" checked>
+                            <label class="form-check-label" for="yes2">
+                                是
+                            </label>
+                        </td>
+                        <td data-th="">
+                            <input class="form-check-input" type="radio" name="result2" id="no2">
+                            <label class="form-check-label" for="no2">
+                                否
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-th="項次">3</td>
+                        <td data-th="說明" class="text-start">已彙整基本資料(人員及土地)</td>
+                        <td data-th="檢查結果">
+                            <input class="form-check-input" type="radio" name="result3" id="yes3">
+                            <label class="form-check-label" for="yes3">
+                                是
+                            </label>
+                        </td>
+                        <td data-th="">
+                            <input class="form-check-input" type="radio" name="result3" id="no3" checked>
+                            <label class="form-check-label" for="no3">
+                                否
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-th="項次">4</td>
+                        <td data-th="說明" class="text-start">有作物(品種)種植相關歷史記錄</td>
+                        <td data-th="檢查結果">
+                            <input class="form-check-input" type="radio" name="result4" id="yes4">
+                            <label class="form-check-label" for="yes4">
+                                是
+                            </label>
+                        </td>
+                        <td data-th="">
+                            <input class="form-check-input" type="radio" name="result4" id="no4" checked>
+                            <label class="form-check-label" for="no4">
+                                否
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-th="項次">5</td>
+                        <td data-th="說明" class="text-start">保存購買資材之相關收據</td>
+                        <td data-th="檢查結果">
+                            <input class="form-check-input" type="radio" name="result5" id="yes5" checked>
+                            <label class="form-check-label" for="yes5">
+                                是
+                            </label>
+                        </td>
+                        <td data-th="">
+                            <input class="form-check-input" type="radio" name="result5" id="no5">
+                            <label class="form-check-label" for="no5">
+                                否
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-th="項次">6</td>
+                        <td data-th="說明" class="text-start">
+                            <div class="d-flex flex-wrap align-items-start align-items-xl-center">
+                                <p class="mb-2 mb-sm-0 me-3">已申請產銷履歷系統帳號，組織代碼</p>
+                                <label for="item" class="visually-hidden">組織代碼</label>
+                                <input type="text" class="form-control form-control-sm rounded-2" id="item" placeholder="請輸入組織代碼" style="width: 120px;">
+                            </div>
+                    </td>
+                        <td data-th="檢查結果">
+                            <input class="form-check-input" type="radio" name="result6" id="yes6" checked>
+                            <label class="form-check-label" for="yes6">
+                                是
+                            </label>
+                        </td>
+                        <td data-th="">
+                            <input class="form-check-input" type="radio" name="result6" id="no6">
+                            <label class="form-check-label" for="no6">
+                                否
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-th="項次">7</td>
+                        <td data-th="說明" class="text-start">
+                            <div class="d-flex flex-wrap">
+                                <p class="me-3">已將作業紀錄登打至產銷履歷系統</p><span class="text-bright-xdark">請選擇檢查結果</span>
+                            </div>
+                        </td>
+                        <td data-th="檢查結果">
+                            <input class="form-check-input" type="radio" name="result7" id="yes7">
+                            <label class="form-check-label" for="yes7">
+                                是
+                            </label>
+                        </td>
+                        <td data-th="">
+                            <input class="form-check-input" type="radio" name="result7" id="no7">
+                            <label class="form-check-label" for="no7">
+                                否
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-th="項次">8</td>
+                        <td data-th="說明" class="text-start">擁有集團總部</td>
+                        <td data-th="檢查結果">
+                            <input class="form-check-input" type="radio" name="result8" id="yes8" checked>
+                            <label class="form-check-label" for="yes5">
+                                是
+                            </label>
+                        </td>
+                        <td data-th="">
+                            <input class="form-check-input" type="radio" name="result8" id="no8">
+                            <label class="form-check-label" for="no8">
+                                否
+                            </label>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="mb-4">
+                <label for="others" class="form-label">其他說明</label>
+                <input type="text" class="form-control" id="others" >
+            </div>
+            <div class="d-flex justify-content-center mb-4"><button class="btn btn-primary px-5">送出</button></div>
+            <img src="./assets/images/apply-p1.jpg" alt="圖片">
+        </div>
+    </section>
 </main>
 					<!--footer開始-->
 <footer class="footer">
