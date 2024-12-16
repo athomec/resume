@@ -360,19 +360,19 @@
     $(function () {
 
         //下拉複選
-        // 點擊顯示或隱藏下拉選單
+        // 點擊 #multi-select-toggle 展開或隱藏選單
         $('#multi-select-toggle').on('click', function () {
             $('#multi-select-container').toggle();
         });
 
-        // 點擊其他區域隱藏下拉選單
+        // 點擊其他區域隱藏選單
         $(document).on('click', function (e) {
             if (!$(e.target).closest('#custom-select').length) {
                 $('#multi-select-container').hide();
             }
         });
 
-        // 更新選擇的內容到 input 框，並自動隱藏選單
+        // 更新選擇的內容到 input 框，但不自動隱藏
         $('#multi-select-container input[type="checkbox"]').on('change', function () {
             const selectedOptions = $('#multi-select-container input[type="checkbox"]:checked')
                 .map(function () {
@@ -383,9 +383,6 @@
 
             // 更新 input 的顯示內容
             $('#multi-select-toggle').val(selectedOptions || '輔導區域');
-
-            // 選完後自動隱藏下拉選單
-            $('#multi-select-container').hide();
         });
         
         RESIZE();
