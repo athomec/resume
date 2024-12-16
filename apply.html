@@ -358,264 +358,41 @@
 <script src="assets/js/script.js"></script><!--自訂-->
 <script>
     $(function () {
-        //首頁紅眼banner輪播
-        $('.js-banner').slick({
-            centerMode: true,
-            centerPadding: '480px',
-            slidesToShow: 1,
-                infinite: true,
-            cssEase: 'linear',
-            variableWidth: true,
-            variableHeight: true,
-            responsive: [
-                {
-                    breakpoint: 1430,
-                    settings: {
-                        variableWidth: false,
-                        variableHeight: false,
-                        centerMode: false,
-                    }
-                }
-            ]
-        });
-        //一行輪播
-        $('.js-basic-slide').slick({
-            speed: 300,
-            slidesToShow: 4,
-            slidesToScroll: 4,
-            rows: 1,
-            dots: false,
-            responsive: [
-                {
-                    breakpoint: 1200,
-                    settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 1,
-                    }
-                },
-                {
-                    breakpoint: 992,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 1,
-                        rows: 1,
-                    }
-                },
-                {
-                    breakpoint: 768,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        rows: 1,
-                    }
-                }
-            ]
-        });
-        
-        //連結輪播
-        $('.js-link-slide').slick({
-            speed: 300,
-            slidesToShow: 4,
-            slidesToScroll: 4,
-            rows: 1,
-            dots: false,
-            responsive: [
-                {
-                    breakpoint: 1200,
-                    settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 1,
-                    }
-                },
-                {
-                    breakpoint: 992,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 1,
-                        rows: 1,
-                    }
-                },
-                {
-                    breakpoint: 485,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        rows: 1,
-                    }
-                }
-            ]
-        });
-        //電子書輪播
-        $('.js-book-slide').slick({
-            speed: 300,
-            slidesToShow: 5,
-            slidesToScroll: 1,
-            rows: 1,
-            dots: false,
-             arrows: false,
-            responsive: [
-                {
-                    breakpoint: 1200,
-                    settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 1,
-                        arrows: true,
-                    }
-                },
-                {
-                    breakpoint: 768,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 1,
-                        rows: 1,
-                        arrows: true,
-                    }
-                },
-                {
-                    breakpoint: 485,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        rows: 1,
-                        arrows: true,
-                    }
-                }
-            ]
-        });
-        
-        //培訓地圖圖示控制表格
-        $('.js-scroll-link').on('click', function (e) {
-            e.preventDefault(); // 阻止預設行為
 
-            var targetId = $(this).data('target'); // 取得目標 ID
-            var $scrollable = $('#scrollable'); // 滾動區域
-            var $target = $('#' + targetId); // 目標元素
-
-            if ($scrollable.length && $target.length) {
-                var offsetLeft = $target.position().left; // 計算目標相對滾動區域的位置
-                var offset = window.innerWidth > 768 ? 174 : 115; // 動態設定偏移量
-                var adjustedOffset = Math.max(0, offsetLeft - offset); // 確保滾動位置不小於 0
-                $scrollable.animate({ scrollLeft: adjustedOffset }, 500); // 動畫滾動到指定位置
-            }
-            var scrollableTop = $scrollable.offset().top; // 計算 scrollable 的頂部位置
-            var adjustedTop = scrollableTop - 90; // 加上偏移量
-            $('html, body').animate({ scrollTop: adjustedTop }, 500);
-        });
-        //培訓地圖表格
-        $(".js-time-card").click(function (e) {
-            e.preventDefault(); // 阻止預設行為
-
-            $(this).find(".js-time-list").slideToggle(); // 切換下拉效果
-            $(this).toggleClass("open"); // 切換樣式
-
-            // 更新 title 屬性
-            $(this).attr("title", $(this).hasClass("open") ? "收合內容" : "展開內容");
-
-            let target = $(this).attr("data-color"); // 獲取 data-color 的值
-            let nextRow = $(this).parents("tr").next("tr"); // 開始從下一個 <tr> 開始
-
-            while (nextRow.length > 0) { // 確保還有下一個 <tr>
-                let targetElement = nextRow.find('[data-color="' + target + '"]'); // 查找目標元素
-
-                if (targetElement.length > 0) { // 如果找到目標元素
-                    if (targetElement.html().trim()) { // 如果目標元素有內容
-                        targetElement.toggleClass("showcontent"); // 切換樣式
-                        break; // 停止循環
-                    } else {
-                        targetElement.toggleClass("nocontent"); // 如果內容為空，添加 nocontent 樣式
-                    }
-                }
-                nextRow = nextRow.next("tr"); // 繼續查找下一個 <tr>
-            }
-
-            console.log('[data-color="' + target + '"]');
+        //下拉複選
+        // 點擊顯示或隱藏下拉選單
+        $('#multi-select-toggle').on('click', function () {
+            $('#multi-select-container').toggle();
         });
 
-
-
-
-        $(".js-course-toggler").click(function (e) {
-            e.preventDefault(); // 阻止預設行為
-
-            const $currentRow = $(this).parents("tr"); // 當前的 <tr>
-            const $targetCourses = $currentRow.next(".js-courses"); // 找到相鄰的 .js-courses 行
-
-            // 移除所有 .js-time-card 上的 endcontent 和 showcontent 樣式
-            $(".js-time-card").removeClass("endcontent showcontent");
-
-            // 先關閉所有其他的 .js-courses 行
-            $(".js-courses")
-                .not($targetCourses)
-                .slideUp()
-                .prev()
-                .find(".js-course-toggler")
-                .removeClass("open")
-                .attr("title", "展開內容"); // 更新title為"展開內容"
-
-            // 展開當前的 .js-courses 行
-            if ($targetCourses.length > 0) {
-                $targetCourses.slideToggle(() => {
-                    // 在切換完成後移除相關樣式
-                    if (!$targetCourses.is(":visible")) {
-                        // 当前的 .js-courses 被收合时，移除样式
-                        $currentRow.find(".js-time-card").removeClass("endcontent");
-                        const $nextRow = $targetCourses.next("tr");
-                        if ($nextRow.length > 0) {
-                            $nextRow.find(".js-time-card").removeClass("showcontent");
-                        }
-                    }
-                });
-
-                $(this).toggleClass("open"); // 切換按鈕的樣式
-
-                // 更新 .js-course-toggler 的 title
-                $(this).attr("title", $(this).hasClass("open") ? "收合內容" : "展開內容");
-
-                // 為 .js-courses 開啟時，先關閉所有 .js-time-card 裡的 .js-time-list 並移除 open 樣式
-                if ($targetCourses.is(":visible")) {
-                    $(".js-time-card .js-time-list").slideUp(); // 關閉所有 .js-time-list
-                    $(".js-time-card").removeClass("open").attr("title", "展開內容"); // 移除open樣式並更新title
-
-                    // 為 .js-courses 前的 <tr> 內的 .js-time-card 添加 endcontent 樣式
-                    $currentRow.find(".js-time-card").addClass("endcontent").attr("title", "收合內容");
-
-                    // 為 .js-courses 後的 <tr> 內的 .js-time-card 添加 showcontent 樣式
-                    const $nextRow = $targetCourses.next("tr");
-                    if ($nextRow.length > 0) {
-                        $nextRow.find(".js-time-card").addClass("showcontent");
-                    }
-                }
+        // 點擊其他區域隱藏下拉選單
+        $(document).on('click', function (e) {
+            if (!$(e.target).closest('#custom-select').length) {
+                $('#multi-select-container').hide();
             }
         });
 
-        
+        // 更新選擇的內容到 input 框，並自動隱藏選單
+        $('#multi-select-container input[type="checkbox"]').on('change', function () {
+            const selectedOptions = $('#multi-select-container input[type="checkbox"]:checked')
+                .map(function () {
+                    return $(this).next('label').text().trim(); // 抓取 checkbox 對應的文字
+                })
+                .get()
+                .join(', ');
+
+            // 更新 input 的顯示內容
+            $('#multi-select-toggle').val(selectedOptions || '輔導區域');
+
+            // 選完後自動隱藏下拉選單
+            $('#multi-select-container').hide();
+        });
         
         RESIZE();
 
         function RESIZE() {
             WINDOWH = $(window).height();
             WINDOW = $(window).width();
-            
-            if (WINDOW < 769) {
-               $('.js-link-card-list').slick({
-                    speed: 300,
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    rows: 3,
-                    dots: false,
-                    responsive: [
-                        {
-                            breakpoint: 768,
-                            settings: {
-                                slidesToShow: 1,
-                                slidesToScroll: 1,
-                                rows: 1,
-                                dots: true
-                            }
-                        }
-                    ]
-                });
-            }
         }
 
         $(window).resize(function () {
