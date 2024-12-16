@@ -106,15 +106,14 @@
             <div class="main-box">
                 <div class="main-box-header">
                     <div class="row gx-3 gy-2">
-                        <div class="col-sm-4 col-lg-3">
+                        <div class="col-sm-4 col-lg-4 col-xl-3">
                             <label for="keyword" class="form-label">關鍵字查詢</label>
                             <input type="text" class="form-control" id="keyword" placeholder="請輸入輔導員姓名">
                         </div>
-                        <div class="col-sm-4 col-lg-3">
+                        <div class="col-sm-4 col-xl-3 col-xxl-4">
                             <div class="form-label">輔導區域</div>
                             <div class="custom-select" id="custom-select">
-                                <input type="text" class="form-select multi-select-toggle" id="multi-select-toggle"
-                                    value="輔導區域" readonly>
+                                    <div id="multi-select-toggle" class="form-select multi-select">輔導區域</div>
                                 <div class="multi-select-container shadow-sm" id="multi-select-container">
                                     <div class="row">
                                         <div class="col-6 col-sm-12 col-md-6">
@@ -255,7 +254,7 @@
                             </div>
 
                         </div>
-                        <div class="col-sm-4 col-lg-2">
+                        <div class="col-sm-4 col-xl-2 col-xxl-2">
                             <label for="group" class="form-label">集團經驗輔導</label>
                             <select class="form-select" id="group">
                                 <option selected>全部</option>
@@ -264,9 +263,9 @@
                                 <option value="3">Three</option>
                             </select>
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-xl-4 col-xxl-3">
                             <div class="d-flex align-items-end justify-content-end w-100 h-100">
-                                <button class="main-box-btn btn btn-primary me-3">
+                                <button class="main-box-btn btn btn-primary me-2">
                                     <img src="./assets/images/ic-search-white.svg" alt="icon" class="me-2">搜尋
                                 </button>
                                 <button class="main-box-btn btn btn-gray-800">
@@ -434,8 +433,7 @@
 <script>
     $(function () {
 
-        //下拉複選
-        // 點擊 #multi-select-toggle 展開或隱藏選單
+      // 點擊 #multi-select-toggle 展開或隱藏選單
         $('#multi-select-toggle').on('click', function () {
             $('#multi-select-container').toggle();
         });
@@ -447,18 +445,36 @@
             }
         });
 
-        // 更新選擇的內容到 input 框，但不自動隱藏
+        // 更新已選項目到 multi-select-toggle
         $('#multi-select-container input[type="checkbox"]').on('change', function () {
+            updateSelectedOptions();
+        });
+
+        // 點擊 "×" 刪除項目
+        $(document).on('click', '.remove-option', function (e) {
+            e.stopPropagation(); // 防止觸發其他點擊事件
+            const value = $(this).data('value'); // 獲取選項的值
+            $(`#multi-select-container input[value="${value}"]`).prop('checked', false); // 取消 checkbox 勾選
+            updateSelectedOptions(); // 更新顯示內容
+        });
+
+        // 更新 multi-select-toggle 的顯示內容
+        function updateSelectedOptions() {
             const selectedOptions = $('#multi-select-container input[type="checkbox"]:checked')
                 .map(function () {
-                    return $(this).next('label').text().trim(); // 抓取 checkbox 對應的文字
+                    const value = $(this).val();
+                    const label = $(this).next('label').text().trim();
+                    return `<span class="selected-item">
+                    ${label}
+                    <span class="remove-option" data-value="${value}">x</span>
+                  </span>`;
                 })
                 .get()
-                .join(', ');
+                .join(' ');
 
-            // 更新 input 的顯示內容
-            $('#multi-select-toggle').val(selectedOptions || '輔導區域');
-        });
+            // 更新到 multi-select-toggle
+            $('#multi-select-toggle').html(selectedOptions || '輔導區域');
+        }
         
         RESIZE();
 

@@ -18648,19 +18648,27 @@ input[readonly] {
       .main-box-header {
         padding: 12px 16px; } }
   .main-box-btn {
-    width: 150px;
+    width: 130px;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    padding-left: 24px; }
+    padding-left: 12px;
+    letter-spacing: 0;
+    height: 43px; }
     @media (max-width: 991px) {
       .main-box-btn {
-        width: 140px;
-        padding-left: 16px; } }
+        padding-left: 16px;
+        height: auto; } }
     @media (max-width: 768px) {
       .main-box-btn {
-        width: 130px;
         font-size: 0.9rem !important; } }
+    .main-box-btn img {
+      width: 16px; }
+  .main-box .form-select, .main-box .form-control {
+    min-height: 43px; }
+    @media (max-width: 523px) {
+      .main-box .form-select, .main-box .form-control {
+        min-height: auto; } }
   .main-box .form-label {
     color: #000; }
     @media (max-width: 768px) {
@@ -19802,6 +19810,16 @@ input[readonly] {
 .custom-select {
   position: relative; }
 
+.multi-select {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
 .multi-select-container {
   display: none;
   padding: 12px 24px !important;
@@ -19820,5 +19838,28 @@ input[readonly] {
     .multi-select-container {
       padding: 12px !important;
       font-size: 0.9rem; } }
+
+.selected-item {
+  background: #EFEFEF;
+  border-radius: 5px;
+  padding: 1px 6px;
+  margin-right: 4px;
+  border: 1px solid #fff;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.remove-option {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-left: 4px;
+  background: url("../images/ic-unselect.svg") no-repeat center;
+  text-indent: -9999px;
+  overflow: hidden;
+  white-space: nowrap; }
 
 /*# sourceMappingURL=all.css.map */
